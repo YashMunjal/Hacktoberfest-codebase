@@ -1,0 +1,31 @@
+/* class Node
+{
+  int data;
+  Node next;
+} */
+
+static Node copyList(Node org)
+{
+	Node n= null;
+  	int x;
+  	while(org!=null)
+    {
+      x=org.data;
+      Node y=new Node(x);
+      if(n==null)
+      {
+        n=y;
+      }
+      else
+      {
+        Node z=n;
+        while(z.next!=null)
+        {
+          z=z.next;
+        }
+        z.next=y;
+      }
+      org=org.next;
+    }
+  return n;
+}

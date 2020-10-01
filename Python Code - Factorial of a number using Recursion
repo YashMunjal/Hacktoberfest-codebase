@@ -1,0 +1,11 @@
+def factorial(n):        
+    if(n==0):
+        return 1
+    elif(n>=1):
+        return n*factorial(n-1)
+    else:
+        print('Cant calculate')
+        
+n=int(input('Enter a positive number:'))
+p = factorial(n)
+print('Factorial of ',n,'is',p)

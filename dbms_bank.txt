@@ -1,0 +1,51 @@
+--create table bank(acc_no number, customer_name varchar2(10), balance number, loan number, FDAccount number);
+--create table bank1(acc_no number, customer_name varchar2(10), balance number);
+--insert into bank1 values(1,'A',2000);
+--insert into bank1 values(2,'B',1000);
+--insert into bank1 values(3,'C',2500);
+--insert into bank1 values(4,'D',3000);
+--insert into bank1 values(5,'E',4000);
+select * from bank1;
+
+declare
+oper char:=:oper;
+amount number:= :amount;
+acc bank1.acc_no%type:=:acc;
+transaction_acc bank1.acc_no%type:=:transaction_acc;
+withdraw_amount exception
+deposit_amount exception;
+balanc exception;
+person_not_found exception;
+
+begin
+dbms_output.put_line('For Deposit press d, for withdraw press w, for transaction press t');
+if oper == 'd' then 
+    if amount > 50000 then
+        raise deposit_amount;
+    else
+        update bank1 set balance= balance+amount where acc_no = acc;
+     end if;
+elsif oper == 'w' then
+    if balance/2 < amount then
+        raise withdraw_amount;
+     else
+         update bank1 set balance= balance - amount where acc_no = acc;
+     end if;
+else
+    if balance < amount
+        raise balanc;
+    else
+        update bank1 set balance= balance - amount where acc_no = acc;
+        update bank1 set balance= balance + amount where acc_no = transaction_acc;
+end if;
+
+exception 
+when deposit_amount then
+    dbms_output.put_line('can not deposit more than 50000');
+when withdraw_amount then
+    dbms_output.put_line('can not withdrawing  more than 50%');
+when balanc then
+    dbms_output.put_line('balance not sufficient');
+when data_not_found then
+    dbms_output.put_line('no such data exist');
+end;

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+// Other imports go here, Do NOT change the class name
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    int test = sc.nextInt();
+    
+    while(test-- > 0){
+      int r = sc.nextInt();
+      int a[][] = new int[r][r];
+      
+      for(int i = 0 ; i < a.length ; i++)
+        for(int j = 0 ; j < a.length ; j++)
+          a[i][j] = sc.nextInt();
+      
+      // Main Algo
+      for(int i = 0 ; i < a.length ; i++){
+        for(int j = a.length - 1; j >=0 ; j--){
+            System.out.print(a[j][i]);
+          if(j > 0)
+            System.out.print(" ");
+        }
+        System.out.println("");
+      }
+      System.out.println("");
+    }
+    sc.close();
+  }
+}

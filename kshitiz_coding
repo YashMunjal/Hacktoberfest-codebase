@@ -1,0 +1,46 @@
+/* class LinkList
+{
+  int data;
+  LinkList next;
+  LinkList(int d)
+  {
+    data=d;
+  }
+} */
+
+static LinkList insertBeg(LinkList head, int data)
+{ if (head==null) {
+  LinkList a=new LinkList(data);
+  head=a;
+  head.next=a;
+}
+ else{
+LinkList tmp=head;
+  while(tmp.next!=head)
+  {
+    tmp=tmp.next;
+}
+  LinkList a=new LinkList(data);
+  a.next=head;
+  tmp.next=a;
+ head=a;}
+ return head;
+}
+static LinkList insertEnd(LinkList head, int data)
+{ if (head==null) {
+  LinkList a=new LinkList(data);
+  head=a;
+  head.next=a;
+}
+  else{
+  LinkList tmp=head;
+while(tmp.next!=head)
+  {
+    tmp=tmp.next;
+}
+LinkList a=new LinkList(data);
+  tmp.next=a;
+  a.next=head;
+  }
+  return head;
+}

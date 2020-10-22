@@ -1,0 +1,38 @@
+1. WAP to concatenate dictionary and create new one
+2. WAP to multiply all items in the dictionary
+3. WAP to find min and max in the set
+4. WAP to create set differences
+5. WAP to print all characters in one line
+
+1. A store charges Rs 12 per item if you buy less than 10 items, Rs 10 if items = [10, 99], Rs 7 if items = 100 or more. WAP to ask the user number of items, display the total cost
+
+2. WAP that finds squares of numbers from 1 to 100, find how many end at 4 and how many end at 9
+
+3. print the sequence till n:
+1---1
+2---4
+3---9
+4---16
+
+4. sequence till n:
+1 - 2 + 3 - 4 + 5 - 6 + 7 ... + 1999 - 2000
+
+5. WAP to find if given number is a perfect number
+(i)prefect no is one which has sum of all its factors to it self(number itself is not counted)
+(ii)example: for 6 factors are 1, 2, 3 (6 is not considered)
+(iii)sum of 1, 2, 3 is 6, number itself
+
+6. WAP to do the following on 10 test scores entered by user:
+(i)highest and the lowest
+(ii)average of the score
+(iii)second largest score
+(iv)if score > 100, print warning msg
+(v)drop lowest 2 scores, then print the average
+
+7. WAP to count vowels and consonants in user entered string
+
+8. WAP to generate a dictionary of the pattern:
+(i){ i : i*i }
+
+9. WAP that counts number of letters and numbers in the given string
+ 
